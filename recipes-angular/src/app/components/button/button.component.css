@@ -1,0 +1,19 @@
+.cuteButton {
+    background-color: #ffb3c1;
+    color: #fff0f3;
+    cursor: pointer;
+    padding: 1.5rem;
+    margin: 2rem;
+    border: 0;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-family: monospace;
+}
+
+.cuteButton:hover {
+    background-color: #ff8fa3;
+}
+
+.cuteButton:focus {
+    background-color: #ff758f;
+}
