@@ -32,4 +32,4 @@ jobs:
 
     - name: Test
       working-directory: recipes-angular
-      run: npm test --if-present --watch=false --browsers=ChromeHeadlessCI
+      run: npm test -- --watch=false --browsers=ChromeHeadless --no-sandbox
