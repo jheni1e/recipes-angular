@@ -39,4 +39,4 @@ jobs:
       working-directory: recipes-angular
       run: |
         export CHROME_BIN=google-chrome
-        npm test -- --watch=false --browsers=ChromeHeadless --no-sandbox
+        npm test -- --watch=false --browsers=ChromeHeadless
