@@ -1,1 +1,16 @@
-<p>main-page works!</p>
+<section class="main-container">
+  <h1>𝜗ৎ My Recipes</h1>
+  <p>Check my recipes, made with love .✦ ݁˖</p>
+</section>
+
+<div class="grid">
+  <app-recipe-card
+    *ngFor="let recipe of filteredList"
+    [recipe]="recipe"
+  ></app-recipe-card>
+</div>
+
+<div class="search-container">
+    <app-search-bar />
+    <app-button label="Search"/>
+</div>
