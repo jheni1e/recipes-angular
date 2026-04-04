@@ -1,0 +1,32 @@
+.btn-pink {
+  background: linear-gradient(135deg, #ffb3c1, #ff8fa3);
+  color: #fff;
+  cursor: pointer;
+  padding: 0.9rem 1.8rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  box-shadow: 0 6px 15px rgba(255, 143, 163, 0.3);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-pink:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(255, 143, 163, 0.4);
+}
+
+.btn-pink:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 10px rgba(255, 143, 163, 0.3);
+}
+
+.btn-pink:focus-visible {
+  outline: 3px solid #ff4d6d;
+  outline-offset: 3px;
+}
