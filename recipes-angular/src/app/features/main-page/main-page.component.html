@@ -1,1 +1,27 @@
-<p>main-page works!</p>
+<section class="main-container">
+  <h1>𝜗ৎ My Recipes</h1>
+  <p>Check my recipes, made with love .✦ ݁˖</p>
+</section>
+
+<div class="grid">
+  @for (recipe of filteredList; track recipe) {
+  <app-recipe-card [recipe]="recipe"></app-recipe-card>
+  }
+</div>
+
+<div class="search-container">
+  <app-search-bar />
+  <app-button label="Search" />
+</div>
+
+<div class="kaomoji-container">
+  @for (k of kaomojis; track k) {
+  <pre
+    class="kaomoji"
+    [style.top.%]="k.top"
+    [style.left.%]="k.left"
+    [style.animation-delay.s]="k.delay"
+    [innerText]="k.content"
+  ></pre>
+  }
+</div>
