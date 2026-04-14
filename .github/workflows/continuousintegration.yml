@@ -2,37 +2,47 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Use Node.js 18
-      uses: actions/setup-node@v4
-      with:
-        node-version: 18
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-    - name: Install dependencies
-      working-directory: recipes-angular
-      run: npm ci
+      - name: Install dependencies
+        working-directory: recipes-angular
+        run: npm ci
 
-    - name: Build
-      working-directory: recipes-angular
-      run: npm run build --if-present
+      - name: Build
+        working-directory: recipes-angular
+        run: npm run build --if-present
 
-    - name: Install Chrome
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y google-chrome-stable
-    
-    - name: Test
-      working-directory: recipes-angular
-      run: |
-        export CHROME_BIN=google-chrome
-        npm test -- --watch=false --browsers=ChromeHeadless
+      - name: Install Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+
+      - name: Test
+        working-directory: recipes-angular
+        run: |
+          export CHROME_BIN=google-chrome
+          npm test -- --watch=false --browsers=ChromeHeadless
+
+          name: Discord Webhook
+  discord:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Discord Webhook
+        uses: johnnyhuy/actions-discord-git-webhook@main
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
