@@ -36,8 +36,6 @@ jobs:
         run: |
           export CHROME_BIN=google-chrome
           npm test -- --watch=false --browsers=ChromeHeadless
-
-          name: Discord Webhook
   discord:
     runs-on: ubuntu-latest
     steps:
