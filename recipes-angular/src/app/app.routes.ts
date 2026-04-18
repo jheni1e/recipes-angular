@@ -6,24 +6,10 @@ import { AboutComponent } from './features/about/about.component';
 import { FavoritesComponent } from './features/favorites/favorites.component';
 
 export const routes: Routes = [
-  {
-    path: '',
-    component: MainPageComponent,
-  },
-  {
-    path: 'recipes',
-    component: RecipesComponent,
-  },
-  {
-    path: 'favorites',
-    component: FavoritesComponent,
-  },
-  {
-    path: 'about',
-    component: AboutComponent,
-  },
-  {
-    path: '**',
-    component: NotFoundComponent,
-  }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: MainPageComponent },
+  { path: 'recipes', component: RecipesComponent, },
+  { path: 'favorites', component: FavoritesComponent, },
+  { path: 'about', component: AboutComponent, },
+  { path: '**', component: NotFoundComponent, }
 ];

@@ -1,0 +1,52 @@
+.recipes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+    background-color: #f6f3ea;
+}
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    padding: 12px 12px 20px 12px;
+    border-radius: 6px;
+    background-image: url('../../assets/paper.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    font-family: 'Open Sans', serif;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.recipe:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 12px 24px rgba(120, 100, 80, 0.2);
+}
+
+.recipe img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.95) contrast(0.95) saturate(0.9);
+}
+
+.recipe p {
+    margin: 0.4rem 1rem;
+}
+
+.recipe p:first-of-type {
+    font-size: 1.15rem;
+    font-weight: bolder;
+    color: #5a4a3f;
+    margin-top: 0.8rem;
+}
+
+.recipe p:last-of-type {
+    font-size: 0.9rem;
+    color: #8a7b6a;
+}
