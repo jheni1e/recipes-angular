@@ -1,12 +1,12 @@
-import { IRecipe } from './Recipes';
+import { IRecipe } from "./recipes";
 
 export const RecipesMock: IRecipe[] = [
   {
     id: 1,
     title: 'Brownie de chocolate',
     description: 'Brownie de chocolate da @phyyysalis',
-    imageUrl: 'assets/cookie.jpg',
-    time: 25,
+    imageUrl: 'https://imgs.search.brave.com/uU3thbG0CgTwwr9HcU6JqRgjh0WnYpv74qGiMUrnzOs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzE0LzMwLzQxLzQ2/LzM2MF9GXzE0MzA0/MTQ2NzFfNTNzS0k0/cTloMDhSWlNjTTVO/Y1FRdngyUlRLSmZl/U0suanBn',
+    time: 50,
     ingredients: [
       '160g de chocolate ao leite',
       '100g de manteiga',

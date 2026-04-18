@@ -1,1 +1,7 @@
-<p>recipes works!</p>
+<div class="recipes">
+  <div class="recipe" *ngFor="let r of recipes"> 
+    <img src="{{ r.imageUrl }}" />
+    <p>{{ r.title }}</p>
+    <p>⭐ {{ r.rating }} — {{ r.time }} min</p>
+  </div>
+</div>
