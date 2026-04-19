@@ -31,6 +31,6 @@ export const RecipesMock: IRecipe[] = [
     ],
     category: 'doce',
     rating: 5,
-    isFavorite: false,
+    isFavorite: true,
   },
 ];

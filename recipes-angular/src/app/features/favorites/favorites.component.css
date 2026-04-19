@@ -1,0 +1,57 @@
+.favorites-container {
+    min-height: 100vh;
+    padding: 3rem 2rem;
+    background-color: #f6f3ea;
+}
+
+.favorites-title {
+    font-family: 'Poppins', serif;
+    font-size: 2rem;
+    text-align: center;
+    color: #5a4a3f;
+    margin-bottom: 2rem;
+}
+
+.favorites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.favorite-recipe {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    cursor: pointer;
+    background-image: url('../../assets/squares-paper.png');
+    border-radius: 16px;
+    padding: 1rem;
+    border: 1px solid #e8e2d6;
+    box-shadow: 0 6px 16px rgba(120, 100, 80, 0.15);
+    transition: all 0.3s ease;
+}
+
+.favorite-recipe:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 22px rgba(120, 100, 80, 0.2);
+}
+
+.favorite-recipe img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.favorite-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.favorite-meta {
+    font-size: 0.9rem;
+    color: #8a7b6a;
+}

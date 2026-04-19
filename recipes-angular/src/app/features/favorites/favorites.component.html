@@ -1,1 +1,25 @@
-<p>favorites works!</p>
+<div class="favorites-container">
+  <h1 class="favorites-title">Receitas favoritas 🍓</h1>
+
+  @if (favorites.length === 0) {
+    <p class="empty-state">
+      nenhuma receita favorita ainda 🌸
+    </p>
+  } @else {
+    <div class="favorites-list">
+      @for (r of favorites; track $index) {
+        <div class="favorite-recipe">
+          <img [src]="r.imageUrl" />
+
+          <div class="favorite-info">
+            <span class="favorite-title">{{ r.title }}</span>
+            <span class="favorite-meta">{{ r.description }}</span>
+            <span class="favorite-meta">
+              ⭐ {{ r.rating }} • ⏳ {{ r.time }} min
+            </span>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>
