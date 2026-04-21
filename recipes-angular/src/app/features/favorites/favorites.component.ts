@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { IRecipe } from '../../models/recipes';
 import { RecipesMock } from '../../models/recipes.mock';
+import { HeaderComponent } from '../../shared/header/header.component';
 
 @Component({
   selector: 'app-favorites',
   standalone: true,
-  imports: [],
+  imports: [HeaderComponent],
   templateUrl: './favorites.component.html',
   styleUrl: './favorites.component.css'
 })
