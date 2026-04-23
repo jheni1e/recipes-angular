@@ -1,1 +1,49 @@
-<p>recipe-detail works!</p>
+<div class="recipe-detail-container">
+
+  @if (recipe) {
+    <div class="recipe-header">
+      <img [src]="recipe.image" alt="{{ recipe.name }}" />
+
+      <div class="recipe-info">
+        <h1>{{ recipe.name }}</h1>
+
+        <span class="meta">
+          ⭐ {{ recipe.rating }} • ⏳ {{ recipe.time }} min
+        </span>
+
+        <p class="description">
+          {{ recipe.description }}
+        </p>
+      </div>
+    </div>
+
+    <div class="recipe-content">
+
+      <div class="ingredients">
+        <h2>Ingredientes</h2>
+
+        <ul>
+          @for (item of recipe.ingredients; track item) {
+            <li>• {{ item }}</li>
+          }
+        </ul>
+      </div>
+
+      <div class="steps">
+        <h2>Modo de preparo</h2>
+
+        <ol>
+          @for (step of recipe.steps; track step; let i = $index) {
+            <li>
+              <span class="step-number">{{ i + 1 }}</span>
+              {{ step }}
+            </li>
+          }
+        </ol>
+      </div>
+
+    </div>
+  } @else {
+    <p>Receita não encontrada.</p>
+  }
+</div>
