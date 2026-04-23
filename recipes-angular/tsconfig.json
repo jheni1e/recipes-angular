@@ -4,7 +4,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "types": ["jasmine"],
-    "rootDir": "./src",   // 👈 ADICIONA ISSO
+    "rootDir": "./src",
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
